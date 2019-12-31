@@ -1,14 +1,20 @@
 package com.anurag.spring.EmployeeManagement.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
+
+
+
+import lombok.*;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "employee")
-@Data
+//@Getter
+//@Setter
 @AllArgsConstructor
+@NoArgsConstructor
+//@ToString
+@Data
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
