@@ -1,10 +1,18 @@
-Version 2: Use of EntityManager and standard JPA API 
+Version 3: Use of Spring Data JPA
 
- Create/Save new Entity : entityManager.persist(..)
- Retrieve entity by id: entityManager.find(..)
- Retrieve list of entities : entityManager.createQuery(..)
- Save or update entity: entityManager.merge(..)
- Delete entity : session.remove(..)
+Spring Dta JPA provides the interface : JPA repository.
+Exposes methods (some by inheritance from parents)
+-findAll(..)
+-findbyId(..)
+-save(..)
+etc..etc..
+
+Just Plugin the following:
+Entity type : Employee and Primary key : Integer
+
+Extend the JpaRepository interface.
+Use your repository in your app.
+No need of the implementation class.
  
 URLs:
  GET : http://localhost:8080/api/employees

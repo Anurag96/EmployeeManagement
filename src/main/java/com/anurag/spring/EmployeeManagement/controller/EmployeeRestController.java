@@ -1,9 +1,7 @@
 package com.anurag.spring.EmployeeManagement.controller;
 
-import com.anurag.spring.EmployeeManagement.dao.EmployeeDAO;
 import com.anurag.spring.EmployeeManagement.entity.Employee;
 import com.anurag.spring.EmployeeManagement.service.EmployeeService;
-import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
