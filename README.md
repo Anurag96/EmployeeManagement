@@ -1,26 +1,21 @@
-Version 3: Use of Spring Data JPA
+Version 4: Use of Spring Data REST + Spring Data JPA
 
-Spring Dta JPA provides the interface : JPA repository.
-Exposes methods (some by inheritance from parents)
--findAll(..)
--findbyId(..)
--save(..)
-etc..etc..
+Spring Data REST will expose these  below endpoint for free.
+It will scan your project for JpaRepository.
+Exposes REST APIs for each entity type for JpaRepository.
 
-Just Plugin the following:
-Entity type : Employee and Primary key : Integer
+By default, Spring Data REST will create endpoint based on entity type.
+Simple pluralized form
+-First character of entity is lowercase
+-Then just adds an "s" to the entity.
 
-Extend the JpaRepository interface.
-Use your repository in your app.
-No need of the implementation class.
- 
+public interface EmployeeRepository extends JpaRepository<Employee,Integer>
+Employee => employees 
+
 URLs:
- GET : http://localhost:8080/api/employees
- GET by ID : http://localhost:8080/api/employees/6
- POST : http://localhost:8080/api/employees
- PUT : http://localhost:8080/api/employees
- DELETE : http://localhost:8080/api/employees/6
- 
-
- 
+ GET : http://localhost:8080/emp-mgmt/employees
+ GET by ID : http://localhost:8080/emp-mgmt/employees/6
+ POST : http://localhost:8080/emp-mgmt/employees
+ PUT : http://localhost:8080/emp-mgmt/employees
+ DELETE : http://localhost:8080/emp-mgmt/employees/6
  
